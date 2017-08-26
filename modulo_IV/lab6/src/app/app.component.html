@@ -1,0 +1,89 @@
+
+<h1>{{ title1 }}</h1>
+<ul>
+    <li *ngFor="let vehicle of vehicles" (click)="onSelect1(vehicle)">
+        <span>{{vehicle.bland}}</span> {{vehicle.model}}
+    </li>
+</ul>
+
+<table>
+    <tr>
+        <th>Marca</th>       
+    </tr>
+    <tr *ngFor="let vehicle of vehicles" (click)="onSelect1(teacher)">
+        <td>{{vehicle.bland}}</td>
+    </tr>
+</table>
+
+<div *ngIf="selected1">
+    <hr />
+    <label>Marca: </label><br />
+    <input [(ngModel)]="selected1.bland" placeholder="Marca"><br />
+</div>
+
+
+
+
+<h1>{{ title2 }}</h1>
+<ul>
+    <li *ngFor="let detail of details" (click)="onSelect2(detail)">
+        <span>{{detail.bland}}</span> {{detail.model}}
+    </li>
+</ul>
+
+<table>
+    <tr>
+        <th>Marca</th>       
+    </tr>
+    <tr *ngFor="let detail of details" (click)="onSelect2(detail)">
+        <td>{{detail.bland}}</td>
+    </tr>
+</table>
+
+<div *ngIf="selected2">
+    <hr />
+    <label>Marca: </label><br />
+    <input [(ngModel)]="selected2.bland" placeholder="Marca"><br />
+    <label>Modelo: </label><br />
+    <input [(ngModel)]="selected2.model" placeholder="Modelo"><br />
+    <label>Color: </label><br />    
+    <input [(ngModel)]="selected2.color" placeholder="Color"><br />
+    <label>plate: </label><br />    
+    <input [(ngModel)]="selected2.plate" placeholder="plate"><br />
+    <label>Capacidad: </label><br />    
+    <input [(ngModel)]="selected2.capcity" placeholder="Capacidad"><br />
+</div>
+
+
+
+<h1>{{ title3 }}</h1>
+<ul>
+    <li *ngFor="let driver of drivers" (click)="onSelect3(driver)">
+        <span>{{driver.id}}</span> {{driver.first_name}}
+    </li>
+</ul>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>        
+    </tr>
+    <tr *ngFor="let driver of drivers" (click)="onSelect3(teacher)">
+        <td>{{driver.id}}</td>
+        <td>{{driver.first_name}}</td>
+        <td>{{driver.last_name}}</td>
+    </tr>
+</table>
+
+<div *ngIf="selected3">
+    <hr />
+    <label>Id: </label><br />
+    <input [(ngModel)]="selected3.id" placeholder="Nombre"><br />
+    <label>Nombre: </label><br />
+    <input [(ngModel)]="selected3.first_name" placeholder="Edad"><br />
+    <label>Apellido: </label><br />    
+    <input [(ngModel)]="selected3.last_name" placeholder="Profesión"><br />
+    <label>vehiculo: </label><br />    
+    <input [(ngModel)]="selected3.bland" placeholder="Profesión"><br />
+</div>
