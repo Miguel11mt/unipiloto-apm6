@@ -1,0 +1,9 @@
+<h1>{{ title }}</h1>
+<ul>
+    <li *ngFor="let teacher of teachers"
+        (click)="onSelect(teacher)">
+        <span>{{teacher.id}}</span> {{teacher.name}}
+    </li>
+</ul>
+
+<app-detail [teacher]="selected"></app-detail>
