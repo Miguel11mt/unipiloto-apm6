@@ -1,0 +1,13 @@
+<div *ngIf="student">
+    <hr />
+    <label>Name: </label><br />
+    <input [(ngModel)]="student.name" placeholder="name"><br />
+    <label>Lastname: </label><br />
+    <textarea [(ngModel)]="student.lastname" placeholder="Lastname"></textarea><br />
+    <label>Age: </label><br />
+    <input [(ngModel)]="student.age" placeholder="Age"><br />
+    <label>Group: </label><br />
+    <input [(ngModel)]="student.group" placeholder="Group"><br />
+    <label>Grade: </label><br />
+    <input [(ngModel)]="student.grade" placeholder="Grade"><br />
+</div>

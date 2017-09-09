@@ -1,0 +1,20 @@
+<h1>{{ title }}</h1>
+
+<div>
+  <label>student name:</label> <input #StudentName />
+  <button (click)="add(StudentName.value); StudentName.value=''">
+    Add
+  </button>
+</div>
+
+
+<hr />
+<ul>
+  <li *ngFor="let student of students"
+      [class.pepito]="student === selected"
+      (click)="onSelect(student)">
+    <span>{{student.id}}</span> {{student.name}}
+  </li>
+</ul>
+
+<student-detail [student]="selected"></student-detail>
