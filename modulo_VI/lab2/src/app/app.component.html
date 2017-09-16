@@ -1,0 +1,5 @@
+<div> {{ (user | async)?.uid }} </div>
+
+<button (click)="login()">Login with Google</button>
+<button (click)="logout()">signOut with Google</button>
+<h2>{{user.uid}}</h2>
