@@ -5,9 +5,11 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-
 import { StudentPage } from '../pages/student/student';
 import { TeacherPage } from '../pages/teacher/teacher';
+import { AddstudentPage } from '../pages/addstudent/addstudent';
+
+import {IonicStorageModule} from "@ionic/storage";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -18,12 +20,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     StudentPage,
-    TeacherPage
+    TeacherPage,
+    AddstudentPage
 
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot({
+      name:'__my_from_db',
+      driverOrder:['websql', 'indexeddb', 'sqlite']
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -31,7 +38,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     StudentPage,
-    TeacherPage
+    TeacherPage,
+    AddstudentPage
   ],
   providers: [
     StatusBar,

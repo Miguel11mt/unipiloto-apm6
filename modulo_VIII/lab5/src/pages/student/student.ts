@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {AddstudentPage} from "../addstudent/addstudent";
+import {ModalController} from 'ionic-angular';
 
 /**
  * Generated class for the TeacherPage page.
@@ -20,10 +22,10 @@ export class StudentPage {
 
   
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
 
-  	this.selectedItem = navParams.get('item');
-  	this.items = [
+    this.selectedItem = navParams.get('item');
+    this.items = [
     {
     first_name: "Armando Lopez Fabregas",
     last_name: "Samsung galaxy 8",
@@ -44,6 +46,11 @@ export class StudentPage {
   }
   ];
 
+  }
+
+  presentProfileModal() {
+    let profileModal = this.modalCtrl.create(AddstudentPage);
+    profileModal.present();
   }
 
 

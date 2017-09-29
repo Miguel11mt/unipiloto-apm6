@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="myForm" (ngSubmit)="saveForm()">
+    <ion-list>
+      <ion-item>
+        <ion-icon name="person" item-left></ion-icon>
+        <ion-label stacked>Documento:</ion-label>
+        <ion-input formControlName="id" type="text" placeholder="Numero de documento"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="person" item-left></ion-icon>
+        <ion-label stacked>Nombres:</ion-label>
+        <ion-input formControlName="name" type="text" placeholder="Nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="person" item-left></ion-icon>
+        <ion-label stacked>Apellidos:</ion-label>
+        <ion-input formControlName="last_name" type="text" placeholder="Apellidos"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>PHYTON</ion-label>
+        <ion-checkbox color="dark" checked="false"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>C##</ion-label>
+        <ion-checkbox value="cherry" checked="false"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>PHP</ion-label>
+        <ion-checkbox value="cherry" checked="false"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    <div padding>
+      <button ion-button block type="submit" [disabled]="!myForm.valid">Guardar</button>
+    </div>
+  </form>
+</ion-content>

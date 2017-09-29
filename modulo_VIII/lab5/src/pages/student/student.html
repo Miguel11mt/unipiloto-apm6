@@ -15,14 +15,16 @@
 
 
 <ion-content padding>
-   <ion-icon name="add-circle" color="primary" icon-right></ion-icon>
-   <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">      
-      <ion-icon name="person" color="primary" ></ion-icon>
-      <div class="item-first_name" item-right>
-        {{item.first_name}}
-      </div>
-    </button>
-  </ion-list>
+    <ion-fab>
+      <button ion-fab (click)="presentProfileModal()">Add</button>
+    </ion-fab>
+    <ion-list>
+      <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">      
+        <ion-icon name="person" color="primary" ></ion-icon>
+        <div class="item-first_name" item-right>
+          {{item.first_name}}
+        </div>
+      </button>
+    </ion-list>
 
 </ion-content>
