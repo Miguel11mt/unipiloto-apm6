@@ -8,8 +8,11 @@ import { ListPage } from '../pages/list/list';
 import { StudentPage } from '../pages/student/student';
 import { TeacherPage } from '../pages/teacher/teacher';
 import { AddstudentPage } from '../pages/addstudent/addstudent';
+<<<<<<< HEAD
 import { AddteacherPage } from '../pages/addteacher/addteacher';
 import { SearchPage } from '../pages/search/search';
+=======
+>>>>>>> origin/master
 
 import {IonicStorageModule} from "@ionic/storage";
 
@@ -23,9 +26,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     StudentPage,
     TeacherPage,
+<<<<<<< HEAD
     AddstudentPage,
     AddteacherPage,
     SearchPage
+=======
+    AddstudentPage
+>>>>>>> origin/master
 
   ],
   imports: [
@@ -43,9 +50,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     StudentPage,
     TeacherPage,
+<<<<<<< HEAD
     AddstudentPage,
     AddteacherPage,
     SearchPage
+=======
+    AddstudentPage
+>>>>>>> origin/master
   ],
   providers: [
     StatusBar,

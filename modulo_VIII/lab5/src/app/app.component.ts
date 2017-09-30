@@ -8,7 +8,10 @@ import { ListPage } from '../pages/list/list';
 import { StudentPage } from '../pages/student/student';
 import { TeacherPage } from '../pages/teacher/teacher';
 import { AddstudentPage } from '../pages/addstudent/addstudent';
+<<<<<<< HEAD
 import { SearchPage } from '../pages/search/search';
+=======
+>>>>>>> origin/master
 
 @Component({
   templateUrl: 'app.html'
@@ -25,12 +28,20 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
+<<<<<<< HEAD
       { icon: 'home', title: 'Home', component: HomePage },
       { icon: 'list', title: 'List', component: ListPage },
       { icon: 'person', title: 'Student', component: StudentPage },
       { icon: 'people', title: 'Teachers', component: TeacherPage },
       { icon: 'person-add', title: 'Add student', component: AddstudentPage },
       { icon: 'search', title: 'Search', component: SearchPage }
+=======
+      { title: 'Home', component: HomePage },
+      { title: 'List', component: ListPage },
+      { title: 'Student', component: StudentPage },
+      { title: 'Teacher', component: TeacherPage },
+      { title: 'Add student', component: AddstudentPage }
+>>>>>>> origin/master
     ];
 
   }

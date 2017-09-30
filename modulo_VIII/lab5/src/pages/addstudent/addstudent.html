@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   <ion-header>
   <meta charset="utf-8">
@@ -12,6 +13,16 @@
 
 
 
+=======
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+>>>>>>> origin/master
 <ion-content padding>
   <form [formGroup]="myForm" (ngSubmit)="saveForm()">
     <ion-list>
@@ -32,6 +43,7 @@
       </ion-item>
       <ion-item>
         <ion-label>PHYTON</ion-label>
+<<<<<<< HEAD
         <ion-checkbox  value="cherry" formControlName="coursesphython" color="dark" checked="false"></ion-checkbox>
       </ion-item>
       <ion-item>
@@ -52,6 +64,19 @@
     </ion-item>
     -->
 
+=======
+        <ion-checkbox color="dark" checked="false"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>C##</ion-label>
+        <ion-checkbox value="cherry" checked="false"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>PHP</ion-label>
+        <ion-checkbox value="cherry" checked="false"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+>>>>>>> origin/master
     <div padding>
       <button ion-button block type="submit" [disabled]="!myForm.valid">Guardar</button>
     </div>

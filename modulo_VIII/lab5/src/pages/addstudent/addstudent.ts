@@ -14,6 +14,7 @@ import { Storage } from '@ionic/storage';
   selector: 'page-addstudent',
   templateUrl: 'addstudent.html',
 })
+<<<<<<< HEAD
 
 export class AddstudentPage {
    myForm: FormGroup;   
@@ -41,6 +42,23 @@ export class AddstudentPage {
   }
 
   
+=======
+export class AddstudentPage {
+   myForm: FormGroup;   
+
+  constructor(public navCtrl: NavController, private storage: Storage, public formBuilder: FormBuilder) {
+  	    this.myForm = this.createForm();
+  }
+
+   private createForm() {
+    return this.formBuilder.group({
+      id: ['', Validators.compose([Validators.required, Validators.minLength(4), Validators.maxLength(10)])],
+      name: ['', Validators.compose([Validators.required, Validators.minLength(4), Validators.maxLength(10)])],
+      last_name: ['', Validators.required]
+    });
+  }
+
+>>>>>>> origin/master
    saveForm(){
   	this.storage.set('form', this.myForm.value);
   	this.storage.get('form')
@@ -49,6 +67,7 @@ export class AddstudentPage {
   	.catch(error => console.error(error));
   }
 
+<<<<<<< HEAD
 
   itemTapped(event, item) {
     // That's right, we're pushing to ourselves!
@@ -62,3 +81,6 @@ export class AddstudentPage {
   }
 
 }
+=======
+}
+>>>>>>> origin/master

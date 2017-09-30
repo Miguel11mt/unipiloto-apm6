@@ -15,4 +15,8 @@ export class Person {
     }
 }
 
+<<<<<<< HEAD
   
+=======
+  
+>>>>>>> origin/master
