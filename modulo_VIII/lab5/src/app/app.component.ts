@@ -7,6 +7,8 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { StudentPage } from '../pages/student/student';
 import { TeacherPage } from '../pages/teacher/teacher';
+import { AddstudentPage } from '../pages/addstudent/addstudent';
+import { SearchPage } from '../pages/search/search';
 
 @Component({
   templateUrl: 'app.html'
@@ -16,17 +18,19 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{icon: string, title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage },
-      { title: 'Student', component: StudentPage },
-      { title: 'Teacher', component: TeacherPage }
+      { icon: 'home', title: 'Home', component: HomePage },
+      { icon: 'list', title: 'List', component: ListPage },
+      { icon: 'person', title: 'Student', component: StudentPage },
+      { icon: 'people', title: 'Teachers', component: TeacherPage },
+      { icon: 'person-add', title: 'Add student', component: AddstudentPage },
+      { icon: 'search', title: 'Search', component: SearchPage }
     ];
 
   }

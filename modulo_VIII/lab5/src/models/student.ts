@@ -1,7 +1,11 @@
-export class Student {
-  firts_name: number;
-  last_name: string;
-  document: number;
-  courses: string;
-  profession: string;
+import { Person } from './person';
+
+export class Student extends Person {
+
+   grade: string;
+
+   constructor(id: number, firts_name: string, last_name: string, courses: Array<string>, grade: string) {
+        super(id, firts_name, last_name, courses);
+        this.grade = grade;
+   }
 }

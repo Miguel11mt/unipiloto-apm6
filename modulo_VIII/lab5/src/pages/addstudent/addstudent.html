@@ -1,0 +1,59 @@
+
+  <ion-header>
+  <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>aDD sTUDENT</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+  <form [formGroup]="myForm" (ngSubmit)="saveForm()">
+    <ion-list>
+      <ion-item>
+        <ion-icon name="person" item-left></ion-icon>
+        <ion-label stacked>Documento:</ion-label>
+        <ion-input formControlName="id" type="text" placeholder="Numero de documento"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="person" item-left></ion-icon>
+        <ion-label stacked>Nombres:</ion-label>
+        <ion-input formControlName="name" type="text" placeholder="Nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="person" item-left></ion-icon>
+        <ion-label stacked>Apellidos:</ion-label>
+        <ion-input formControlName="last_name" type="text" placeholder="Apellidos"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>PHYTON</ion-label>
+        <ion-checkbox  value="cherry" formControlName="coursesphython" color="dark" checked="false"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>C##</ion-label>
+        <ion-checkbox value="cherry" formControlName="coursescchar" checked="false"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>PHP</ion-label>
+        <ion-checkbox value="cherry" formControlName="coursesphp" color="dark" checked="false"></ion-checkbox>
+      </ion-item>    
+
+    </ion-list>
+     <!--
+    <ion-item>      
+        <ion-checkbox ng-repeat="let item of items">
+          {{ item.check }}
+        </ion-checkbox>
+    </ion-item>
+    -->
+
+    <div padding>
+      <button ion-button block type="submit" [disabled]="!myForm.valid">Guardar</button>
+    </div>
+  </form>
+</ion-content>
